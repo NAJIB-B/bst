@@ -1,0 +1,32 @@
+.heading{
+    color: rgba(212, 158, 12, 1);
+
+}
+.top_section{
+    width: 70%;
+    margin: auto;
+}
+.input_div{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:0.5rem;
+    margin-top: 1.5rem;
+}
+
+.input{
+    border: none;
+    border-bottom: 1px solid rgba(60, 60, 67, 0.6);
+   width: 100%;
+}
+.input:focus{
+    outline: 0;
+  
+}
+.input_checkbox{
+    display: flex;
+    justify-content: left;
+}
+.forgot_password_text{
+    cursor: pointer;
+}

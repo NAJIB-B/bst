@@ -1,0 +1,11 @@
+.modal_div{
+   position: absolute;
+   top: 47%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   background: rgba(255, 255, 255, 1);
+   width: calc(100vw - 70vw);
+   padding: 1.1rem;
+   text-align: center;
+   z-index: 5;
+}
