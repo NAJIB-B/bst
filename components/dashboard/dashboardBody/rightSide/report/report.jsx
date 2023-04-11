@@ -1,6 +1,12 @@
 import { useState } from "react";
 import SelectorNav from "../../selectorNav/selectorNav";
 import HorizontalRule from "@/components/horizontalRule/horizontalRule";
+import Styles from "./report.module.css"
+import {  FaFilter, FaSearch } from "react-icons/fa";
+import {  MdArrowDropDown} from "react-icons/md";
+import InputWithIcon from "@/components/inputWithIcon/inputWithIcon";
+import Button from "@/components/button/button";
+import Filter from "../../filter/filter";
 
 const navOptions ={
     option1: "option1",
@@ -25,6 +31,7 @@ const Report = () => {
             option4={"Archived Reports"}></SelectorNav>
             
             <HorizontalRule color={"rgba(118, 118, 128, 0.12)"} marginTop={"-1rem"}></HorizontalRule>
+           <Filter></Filter>
         </>
      );
 }

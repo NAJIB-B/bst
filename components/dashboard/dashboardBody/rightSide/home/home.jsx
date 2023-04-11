@@ -47,14 +47,18 @@ const Home = () => {
                 <Button 
                 fill={"rgba(10, 44, 78, 1)"} 
                 color={"white"} 
+                marginTop={"0.5rem"}
                 radius={"0.625rem"}
                 width={"25%"}
+                border={"0"}
                 padding={"0.8rem"}>Go to Data</Button>
                 <Button 
                 fill={"rgba(39, 174, 96, 1)"} 
                 color={"white"} 
+                marginTop={"0.5rem"}
                 radius={"0.625rem"}
                 width={"30%"}
+                border={"0"}
                 padding={"0.8rem"}>Ingest Data +</Button>
                 </div>
             </div>
