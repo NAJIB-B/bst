@@ -1,0 +1,22 @@
+.main_container{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.menu_item_div{
+    cursor: pointer;
+    display: flex;
+    gap:2.5rem;
+    align-items: center;
+    justify-content:space-around;
+}
+.active_menu{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    background-color: rgba(212, 158, 12, 1);
+    color: white;
+    border-top-left-radius: 1.875rem;
+    border-bottom-left-radius: 1.875rem;
+}

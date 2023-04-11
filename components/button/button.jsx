@@ -29,7 +29,7 @@ const Button = (props) => {
           height: height ? height : 'fit-content',
           color: color ? color : 'white',
           backgroundColor: fill ? fill : '',
-          padding: !padding ? '1rem 4rem' : padding,
+          padding: !padding ? '' : padding,
           opacity: disabled ? '0.2' : '',
           border: !border ? '' : border,
           borderRadius: !radius ? "" : radius, 

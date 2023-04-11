@@ -1,0 +1,27 @@
+.outer_container{
+    background-color: rgba(255, 255, 255, 1);
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.inner_container{
+    width: 90%;
+    margin: auto;
+    
+}
+.top_section{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.top_section_logo{
+    margin-bottom: -2rem;
+}
+.top_section_right{
+    display: flex;
+    gap: 2.5rem;
+}
+.top_section_right .nav_link_div{
+    display: flex;
+    align-items: center;
+    gap:0.5rem;
+}

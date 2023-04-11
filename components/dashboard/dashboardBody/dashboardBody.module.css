@@ -1,0 +1,11 @@
+.main_container{
+    display:flex;
+    width: 90%;
+    margin: auto;
+}
+.left_side{
+    flex: 8%;
+}
+.right_side{
+    flex: 92%;
+}
