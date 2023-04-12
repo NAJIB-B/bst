@@ -40,7 +40,7 @@ borderColor={"rgba(118, 118, 128, 0.12)"}
     fill={"rgba(118, 118, 128, 0.12)"} 
     color={"rgba(60, 60, 67, 0.6)"} 
     radius={"0.625rem"}
-    width={"20%"}
+    width={"40%"}
     padding={"0.8rem"}
     border={"0"}>Archive</Button>
     </div>

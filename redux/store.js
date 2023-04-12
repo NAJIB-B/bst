@@ -1,5 +1,6 @@
 import { configureStore} from "@reduxjs/toolkit";
 import dashboardReducer from "./dashboard"
+import dashboardMenuOptionReducer from "./dashboardMenuOptions"
 
 
 
@@ -8,6 +9,7 @@ import dashboardReducer from "./dashboard"
 const store = configureStore({
     reducer:{
         dashboard: dashboardReducer,
+        dashboardMenuOption: dashboardMenuOptionReducer,
     },
 })
 

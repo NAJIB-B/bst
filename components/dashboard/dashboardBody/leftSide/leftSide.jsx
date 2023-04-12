@@ -5,7 +5,7 @@ import {  MdArrowDropDown} from "react-icons/md";
 import { RiArrowUpSFill} from "react-icons/ri";
 import { useSelector, useDispatch } from "react-redux";
 import { setSelectedDashboardMenu } from "@/redux/dashboard";
-import { dashboardMenu } from "@/utils/dashboard";
+import { dashboardMenu, reportOptions, logicOptions, dataOptions } from "@/utils/dashboard";
 
 
 const LeftSide = () => {
@@ -28,12 +28,28 @@ const {selectedDashboardMenu} = useSelector((state)=> state.dashboard)
             logo: <BsCalculatorFill size={25}></BsCalculatorFill>,
             dropdown: true,
             onclickFunction: dashboardMenu.report,
+            menuOptions: [
+                {
+                name: " View Reports",
+                onclickFunction: reportOptions.viewReports   
+            },
+                {
+                name: " Upload Report Data",
+                onclickFunction: reportOptions.uploadReportData  
+            },
+        ]
         },
         {
             name: "Data",
             logo: <BsStack size={25}></BsStack>,
             dropdown: true,
             onclickFunction: dashboardMenu.data,
+            menuOptions: [
+                {
+                name: " Data Overview",
+                onclickFunction: dataOptions.dataOverview  
+            },
+        ]
         },
         {
             name: "Logic",
@@ -59,7 +75,8 @@ const {selectedDashboardMenu} = useSelector((state)=> state.dashboard)
             {
                 menuItems.map((item, key)=>{
                   return(
-
+                  <>
+                  
                  <div className={ selectedDashboardMenu == item.onclickFunction
                     ? Styles.active_menu : Styles.menu_item_div} 
                  onClick={()=>{dispatch(setSelectedDashboardMenu(item.onclickFunction))}}>
@@ -81,12 +98,17 @@ const {selectedDashboardMenu} = useSelector((state)=> state.dashboard)
                     : <MdArrowDropDown size={25} color={"transparent"}></MdArrowDropDown> }
                 </>
                }
+               
                  </div>
+                 
+                  </>
                   )
                 })
             }
         </div>
      );
-}
- 
-export default LeftSide;
+    }
+    
+    export default LeftSide;
+    // {selectedDashboardMenu == item.onclickFunction 
+    //  ? <div className={Styles.active_menu}>View Reports</div> : ""}    

@@ -5,8 +5,16 @@
     border-radius: 0.625rem;
     width:76.5%;
     top:88px;
+    background-color:rgba(255, 255, 255, 1) ; 
 }
 .inner_container{
     width: 90%;
     margin: auto;
 }
+
+@media screen and (max-width: 900px){
+
+    .main_container{
+        width:75.5%;
+    }
+    }
