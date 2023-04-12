@@ -15,7 +15,7 @@
 }
 .button_type{
     background-color: rgba(118, 118, 128, 0.12);
-    padding: 0.5rem;
+    padding: 4px 14px;
     display: flex;
     justify-content: space-between;
     align-items: center;

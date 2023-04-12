@@ -2,7 +2,7 @@
     display: fixed;
     height: 48.5vh;
     overflow-y: scroll;
-    
+    overflow-x: hidden;
 }
 
 .reports_container::-webkit-scrollbar {

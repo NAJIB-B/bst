@@ -50,7 +50,7 @@ const Home = () => {
                 radius={"0.625rem"}
                 width={"25%"}
                 border={"0"}
-                padding={"0.8rem"}>Go to Data</Button>
+                padding={"12px 16px"}>Go to Data</Button>
                 <Button 
                 fill={"rgba(39, 174, 96, 1)"} 
                 color={"white"} 
@@ -58,7 +58,7 @@ const Home = () => {
                 radius={"0.625rem"}
                 width={"30%"}
                 border={"0"}
-                padding={"0.8rem"}>Ingest Data +</Button>
+                padding={"12px 24px"}>Ingest Data +</Button>
                 </div>
             </div>
           </div>
