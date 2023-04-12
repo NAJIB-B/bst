@@ -1,0 +1,61 @@
+.main_container{
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    align-items: center;
+    margin-right: 1rem;
+    position: relative;
+}
+
+
+.hr_div{
+    width: 95%;
+    margin: auto;
+}
+.first_div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.2rem
+}
+.first_div .bottom{
+    display: flex;
+    justify-content: space-between;
+    gap:1rem;
+}
+.first_div .bottom .p{
+
+position: relative;
+
+}
+.first_div .bottom .p::before{
+content: " ";
+position: absolute;
+background-color: rgba(37, 37, 37, 1);
+width: 2px;
+height: 20px;
+right: -7px;
+bottom: 0;
+}
+.second_div .p{
+    color: rgba(212, 158, 12, 1);
+}
+.third_div{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.fourth_div{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-right: 0.2rem;
+}
+.fourth_div .right{
+    display: flex;
+    flex-direction: column;
+}
+.fourth_div .right .second_item{
+    display: flex;
+    justify-content: space-between;
+}

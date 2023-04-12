@@ -10,7 +10,7 @@ const Filter = () => {
          <div className={Styles.top_section}>
 
 <div className={Styles.filter_btn}>
-    <FaFilter size={25}></FaFilter>
+    <FaFilter size={22}></FaFilter>
     <span>Filter</span>
     <MdArrowDropDown size={25}></MdArrowDropDown>
 </div>

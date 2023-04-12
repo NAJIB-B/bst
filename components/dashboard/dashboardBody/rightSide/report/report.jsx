@@ -7,6 +7,7 @@ import {  MdArrowDropDown} from "react-icons/md";
 import InputWithIcon from "@/components/inputWithIcon/inputWithIcon";
 import Button from "@/components/button/button";
 import Filter from "../../filter/filter";
+import ReportObject from "./reportObject/reportObject";
 
 const navOptions ={
     option1: "option1",
@@ -31,6 +32,22 @@ const Report = () => {
             option4={"Archived Reports"}></SelectorNav>
             
            <Filter></Filter>
+           
+
+<HorizontalRule 
+color={"rgba(118, 118, 128, 0.12)"} 
+marginTop={"1rem"}
+marginBottom={"0.8rem"}></HorizontalRule>
+
+           <div className={Styles.reports_container}>
+
+           <ReportObject></ReportObject>
+           <ReportObject></ReportObject>
+           <ReportObject></ReportObject>
+           <ReportObject></ReportObject>
+           <ReportObject></ReportObject>
+           <ReportObject></ReportObject>
+           </div>
         </>
      );
 }

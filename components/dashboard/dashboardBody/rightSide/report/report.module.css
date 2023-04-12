@@ -1,0 +1,21 @@
+.reports_container{
+    display: fixed;
+    height: 48.5vh;
+    overflow-y: scroll;
+    
+}
+
+.reports_container::-webkit-scrollbar {
+    background-color: rgba(122, 122, 122, 1);
+    width: 2px;
+    margin-left: 1rem;
+  }
+   
+  .reports_container::-webkit-scrollbar-track {
+  background-color: rgba(232, 232, 232, 1);
+  }
+   
+  .reports_container::-webkit-scrollbar-thumb {
+    background-color: rgba(122, 122, 122, 1);
+    border-radius: 10px;
+  }

@@ -19,6 +19,7 @@
 .action_section{
     display: flex;
     justify-content: space-between;
+    margin-bottom: 1rem;
 }
 .action_section_left{
    flex: 50%;

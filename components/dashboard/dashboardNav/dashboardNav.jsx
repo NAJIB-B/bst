@@ -24,7 +24,7 @@ const DashboardNav = () => {
                     </div>
                 </div>
 
-                <HorizontalRule color={"rgba(118, 118, 128, 0.12)"} marginTop={"0"} ></HorizontalRule>
+                <HorizontalRule color={"rgba(118, 118, 128, 0.12)"} marginTop={"0"} marginBottom={"1rem"}></HorizontalRule>
             </div>
         </div>
      );
