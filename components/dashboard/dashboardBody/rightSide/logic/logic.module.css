@@ -1,0 +1,58 @@
+.switch_button{
+    background-color: rgba(118, 118, 128, 0.12);
+    padding: 4px 14px;
+    display: flex;
+    justify-content: space-around;
+    width: 25%;
+    margin-top: 3rem;
+    border-radius: 10px;
+    align-items: center;
+}
+.switch_button .left{
+    display: flex;
+    flex-direction: column;
+}
+.switch_button .left .top{
+    font-size: 14px;
+}
+.switch_button .left .bottom{
+    font-weight: 600;
+}
+.code_title_div{
+    display: flex;
+    gap: 2rem;
+}
+.code_title_div .active{
+    font-weight: 600;
+    font-size: 14px;
+}
+.code_title_div .inActive{
+    font-size: 14px;
+    font-weight: 600;
+}
+.code_div{
+    display: fixed;
+    height: 53vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: rgba(0, 0, 0, 1);
+    border-radius: 10px;
+    color:rgba(212, 158, 12, 1);
+    padding-right: 2rem;
+}
+
+.code_div::-webkit-scrollbar {
+    width: 8px;
+    margin-left: 1rem;
+  }
+   
+  .code_div::-webkit-scrollbar-track {
+  background-color: rgba(232, 232, 232, 1);
+  }
+   
+  .code_div::-webkit-scrollbar-thumb {
+    background-color: rgba(122, 122, 122, 1);
+    border-radius: 10px;
+  }
+  .code_text{
+  }

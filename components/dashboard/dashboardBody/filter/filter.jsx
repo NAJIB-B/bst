@@ -29,7 +29,7 @@ borderColor={"rgba(118, 118, 128, 0.12)"}
     <div className={Styles.action_section_left}>
     <input type="checkbox" />
     <div className={Styles.filter_btn}>
-    <span>Filter</span>
+    <span>Actions</span>
     <MdArrowDropDown size={25}></MdArrowDropDown>
     </div>
     <p className={Styles.first_text}>Showing 305 reports out of 1093</p>

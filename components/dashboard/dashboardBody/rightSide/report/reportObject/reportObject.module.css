@@ -17,6 +17,7 @@
     bottom: 0;
     top:5px;
     border-top-left-radius: 2rem;
+
 }
 .view_report{
     position: absolute;
@@ -27,13 +28,12 @@
     color: rgba(212, 158, 12, 1);
     padding: 1.6rem 1rem;
     opacity: 0; /* Initially not visible */
-    transform: translateX(100%); /* Move div to the right of the screen */
-    transition: all 0.5s ease;
+    /* width: 0; */
+    transition: all 1s ease;
 }
 .main_container:hover  .view_report{
     opacity: 1; /* Make div visible on hover */
-    transform: translateX(0); /* Move div back to original position */
-  
+   
 }
 .hr_div{
     width: 95%;
