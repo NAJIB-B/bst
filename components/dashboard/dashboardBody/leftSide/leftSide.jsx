@@ -5,13 +5,15 @@ import {  MdArrowDropDown} from "react-icons/md";
 import { RiArrowUpSFill} from "react-icons/ri";
 import { useSelector, useDispatch } from "react-redux";
 import { setSelectedDashboardMenu } from "@/redux/dashboard";
-import { dashboardMenu, reportOptions, logicOptions, dataOptions } from "@/utils/dashboard";
+import { setSelectedReportOption } from "@/redux/dashboardMenuOptions";
+import { dashboardMenu, reportOptions} from "@/utils/dashboard";
 
 
 const LeftSide = () => {
   
     const dispatch = useDispatch()
 const {selectedDashboardMenu} = useSelector((state)=> state.dashboard)
+const {selectedReportOption} = useSelector((state)=> state.dashboardMenuOption)
 
     
   
@@ -28,6 +30,8 @@ const {selectedDashboardMenu} = useSelector((state)=> state.dashboard)
             logo: <BsCalculatorFill size={25}></BsCalculatorFill>,
             dropdown: true,
             onclickFunction: dashboardMenu.report,
+            selectedOption: selectedReportOption,
+            optionSelector: setSelectedReportOption,
             menuOptions: [
                 {
                 name: " View Reports",
@@ -44,12 +48,6 @@ const {selectedDashboardMenu} = useSelector((state)=> state.dashboard)
             logo: <BsStack size={25}></BsStack>,
             dropdown: false,
             onclickFunction: dashboardMenu.data,
-            menuOptions: [
-                {
-                name: " Data Overview",
-                onclickFunction: dataOptions.dataOverview  
-            },
-        ]
         },
         {
             name: "Logic",
@@ -100,6 +98,27 @@ const {selectedDashboardMenu} = useSelector((state)=> state.dashboard)
                }
                
                  </div>
+                 {/* check if the menu item is selected before showing the menu options */}
+                 {selectedDashboardMenu == item.onclickFunction?
+                 <>
+                 
+                 {item.menuOptions ?
+                 <>
+                 {item.menuOptions.map((option, key)=>{
+                    return(
+
+                        <div className={item.selectedOption == option.onclickFunction?
+                        Styles.activeOption : Styles.inActiveOption}
+                        onClick={()=>{dispatch(item.optionSelector(option.onclickFunction))}}
+                        ><p className={Styles.menuOption}>{option.name}</p></div>
+                    )
+                 })}
+                 </>
+                :
+                ""}
+                 </>
+                 :"" 
+                }
                  
                   </>
                   )

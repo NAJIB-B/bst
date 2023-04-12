@@ -3,10 +3,6 @@ import {  reportOptions, logicOptions, dataOptions,  } from "@/utils/dashboard";
 
 const initialState ={
 selectedReportOption : reportOptions.viewReports,
-selectedLogicOption : logicOptions.logicOverview,
-selectedDataOption : dataOptions.dataOverview,
-
-
 }
 
 export const dashboardMenuOptionSlice = createSlice({
@@ -16,12 +12,7 @@ export const dashboardMenuOptionSlice = createSlice({
         setSelectedReportOption: (state, action) =>{
           state.selectedReportOption = action.payload
         },
-        setSelectedLogicOption: (state, action) =>{
-          state.selectedLogicOption = action.payload
-        },
-        setSelectedDataOption: (state, action) =>{
-          state.selectedDataOption = action.payload
-        },
+     
     }
 })
 

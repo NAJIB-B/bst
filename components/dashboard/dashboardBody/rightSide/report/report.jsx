@@ -30,7 +30,6 @@ const Report = () => {
             option3={"Failed Reports"}
             option4={"Archived Reports"}></SelectorNav>
             
-            <HorizontalRule color={"rgba(118, 118, 128, 0.12)"} marginTop={"-1rem"}></HorizontalRule>
            <Filter></Filter>
         </>
      );

@@ -1,4 +1,5 @@
 import Styles from "./selectorNav.module.css"
+import HorizontalRule from "@/components/horizontalRule/horizontalRule";
 
 
 const SelectorNav = (props) => {
@@ -7,6 +8,8 @@ const SelectorNav = (props) => {
     
 
     return ( 
+      <>
+      
         <div className={Styles.nav}>
          {
             option1 ?
@@ -34,6 +37,8 @@ const SelectorNav = (props) => {
             className={active == optionsObject.option5 ? Styles.active : Styles.notActive}>{option5}</p> : ""
          }
         </div>
+        <HorizontalRule color={"rgba(118, 118, 128, 0.12)"} marginTop={"-1rem"} marginBottom={"1rem"}></HorizontalRule>
+      </>
      );
 }
  

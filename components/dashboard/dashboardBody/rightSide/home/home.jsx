@@ -27,7 +27,6 @@ const Home = () => {
           option1={"Ingestions"}
           option2={"Reports"}></SelectorNav>
           
-          <HorizontalRule color={"rgba(118, 118, 128, 0.12)"} marginTop={"-1rem"}></HorizontalRule>
           <div className={Styles.top_section}>
             <div className={Styles.top_section_left}>
                 <p>Data Ingestion Summary</p>

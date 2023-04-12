@@ -11,12 +11,5 @@ export const reportOptions = {
     uploadReportData : "Upload Report Data",
 }
 
-export const dataOptions = {
-    dataOverview : "Data Overview",
-}
 
-export const logicOptions ={
-    logicOverview : "Logic Overview",
-    Rules : "Rules",
-}
 

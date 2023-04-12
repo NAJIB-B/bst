@@ -31,7 +31,6 @@ const Data = () => {
             option3={"Failed"}
             option4={"Archived"}></SelectorNav>
             
-            <HorizontalRule color={"rgba(118, 118, 128, 0.12)"} marginTop={"-1rem"}></HorizontalRule>
 
            <Filter></Filter>
         </>

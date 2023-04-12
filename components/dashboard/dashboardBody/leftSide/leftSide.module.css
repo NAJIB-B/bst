@@ -25,6 +25,26 @@
     border-bottom-left-radius: 1.875rem;
     font-weight: 600;
 }
+.activeOption{
+    cursor: pointer;
+    font-size: 16px;
+    color: rgba(212, 158, 12, 1);
+    border-top-left-radius: 1.875rem;
+    border-bottom-left-radius: 1.875rem;
+    
+    font-weight: 600; 
+}
+.inActiveOption{
+   
+    cursor: pointer;
+    font-size: 16px;
+    border-top-left-radius: 1.875rem;
+    border-bottom-left-radius: 1.875rem;
+    font-weight: 600; 
+}
+.menuOption{
+    margin: 0;
+}
 @media screen and (max-width: 1100px){
 
     .menu_item_div{
