@@ -6,13 +6,16 @@
 .menu_item_div{
     cursor: pointer;
     display: flex;
-    gap:2.5rem;
+    gap:2rem;
     align-items: center;
     justify-content:space-around;
     font-weight: 600;
+    font-size: 18px;
+    color: rgba(10, 44, 78, 1);
 }
 .active_menu{
     cursor: pointer;
+    font-size: 18px;
     display: flex;
     align-items: center;
     justify-content:space-around;

@@ -42,7 +42,7 @@ const {selectedDashboardMenu} = useSelector((state)=> state.dashboard)
         {
             name: "Data",
             logo: <BsStack size={25}></BsStack>,
-            dropdown: true,
+            dropdown: false,
             onclickFunction: dashboardMenu.data,
             menuOptions: [
                 {
@@ -54,13 +54,13 @@ const {selectedDashboardMenu} = useSelector((state)=> state.dashboard)
         {
             name: "Logic",
             logo: <BsRobot size={25}></BsRobot>,
-            dropdown: true,
+            dropdown: false,
             onclickFunction: dashboardMenu.logic,
         },
         {
             name: "System",
             logo: <BsGearFill size={25}></BsGearFill>,
-            dropdown: true,
+            dropdown: false,
             onclickFunction: dashboardMenu.system,
         },
      
