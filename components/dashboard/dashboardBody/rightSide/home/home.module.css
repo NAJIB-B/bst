@@ -35,3 +35,25 @@
     margin: 0;
 
 }
+
+.chart_div{
+    display: fixed;
+    height: 48.5vh;
+    overflow-y: scroll;
+    text-align: center;
+}
+
+.chart_div::-webkit-scrollbar {
+    background-color: rgba(122, 122, 122, 1);
+    width: 2px;
+    margin-left: 1rem;
+  }
+   
+  .chart_div::-webkit-scrollbar-track {
+  background-color: rgba(232, 232, 232, 1);
+  }
+   
+  .chart_div::-webkit-scrollbar-thumb {
+    background-color: rgba(122, 122, 122, 1);
+    border-radius: 10px;
+  }

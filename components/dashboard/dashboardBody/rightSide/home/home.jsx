@@ -4,6 +4,10 @@ import { useState } from "react";
 import HorizontalRule from "@/components/horizontalRule/horizontalRule";
 import Button from "@/components/button/button";
 import {  MdArrowDropDown} from "react-icons/md";
+import BarChart from "./barChart/barChart";
+import Chart from "chart.js/auto";
+import { CategoryScale } from "chart.js";
+
 
 
 const navOptions ={
@@ -11,10 +15,24 @@ const navOptions ={
     option2: "option2",
     none: "none"
 }
-
+Chart.register(CategoryScale);
 const Home = () => {
    
     const [active, setActive] = useState(navOptions.option1)
+    const [chartData, setChartData] = useState({
+        labels: ["Python", "Flutter", "Javascript", "Rust"], 
+        datasets: [
+          {
+            label: "Users Gained ",
+            data: [5, 2, 9, 1  ],
+            backgroundColor: [
+              "rgba(75,192,192,1)",
+            ],
+            borderColor: "black",
+            borderWidth: 2
+          }
+        ]
+    })
     
 
     return ( 
@@ -61,6 +79,10 @@ const Home = () => {
                 padding={"12px 24px"}>Ingest Data +</Button>
                 </div>
             </div>
+          </div>
+          <div className={Styles.chart_div}>
+
+          <BarChart chartData={chartData}></BarChart>
           </div>
           </>
     
