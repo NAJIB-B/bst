@@ -1,5 +1,6 @@
 import Modal from "../modal/modal";
-import {FaUserAlt, FaLock} from "react-icons/fa"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser, faLock} from '@fortawesome/free-solid-svg-icons';
 import Styles from "./signIn.module.css"
 import Button from "../button/button";
 import ForgotPassword from "../forgotPassword/forgotPassword";
@@ -63,7 +64,7 @@ const SignIn = () => {
             <div className={Styles.top_section}>
 
             <div className={Styles.input_div}> 
-               <FaUserAlt size={25}></FaUserAlt>
+            <FontAwesomeIcon icon={faUser} size="xl" style={{color:"rgba(10, 44, 78, 1)"}} />
                <input 
                className={Styles.input}
                type="text" 
@@ -76,7 +77,7 @@ const SignIn = () => {
             <p className={Styles.error_message}> Please input a valid email</p>
           ) : null}
             <div className={Styles.input_div}> 
-               <FaLock size={25}></FaLock>
+            <FontAwesomeIcon icon={faLock} size="xl" style={{color:"rgba(10, 44, 78, 1)"}} />
                <input 
                className={Styles.input}
                name="password"

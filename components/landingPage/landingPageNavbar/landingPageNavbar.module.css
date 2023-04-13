@@ -14,10 +14,14 @@ justify-content: left;
 .navbar_link{
     display: flex;
     align-items: center;
+    gap: 0.5rem;
 }
 .navbar_link_link{
     font-size: 1.125rem;
     font-weight: 500;
     color: rgba(37, 37, 37, 1);
     text-decoration: none;
+}
+.search_icon_div{
+    margin-left: 2rem;
 }

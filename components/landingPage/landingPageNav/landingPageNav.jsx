@@ -1,8 +1,8 @@
 import Styles from "./landingPageNav.module.css"
 import Image from "next/image";
 import HorizontalRule from "@/components/horizontalRule/horizontalRule";
-import {  FaPhone } from "react-icons/fa";
-import {  HiLocationMarker} from "react-icons/hi";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLocationDot , faPhone } from '@fortawesome/free-solid-svg-icons';
 
 
 const LandingPageNav = () => {
@@ -15,13 +15,17 @@ const LandingPageNav = () => {
                     </div>
                     <div className={Styles.top_section_right}>
                         <div className={Styles.contact_details}>
-                            <div><HiLocationMarker size={22} color={"rgba(60, 60, 67, 0.6)"}></HiLocationMarker></div>
+                            <div>
+                            <FontAwesomeIcon icon={faLocationDot} size="xl" style={{color:"rgba(60, 60, 67, 0.6)"}} />
+                                </div>
                             <div>
                                 <p>1, Ajiboye Street, Obata Avenue, Off Olu Akerele Street, Ikeja, Lagos</p>
                             </div>
                         </div>
                         <div className={Styles.contact_details}>
-                            <div><FaPhone size={16} color={"rgba(60, 60, 67, 0.6)"}></FaPhone></div>
+                            <div>
+                            <FontAwesomeIcon icon={faPhone} size="xl" style={{color:"rgba(60, 60, 67, 0.6)"}} />
+                               </div>
                             <div>
                                 <p>+44 13 7527 1001</p>
                             </div>

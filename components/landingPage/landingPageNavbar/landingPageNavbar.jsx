@@ -1,7 +1,7 @@
 import Styles from "./landingPageNavbar.module.css"
 import Link from "next/link";
-import {  MdArrowDropDown} from "react-icons/md";
-import {  FaSearch} from "react-icons/fa";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass , faCaretDown } from '@fortawesome/free-solid-svg-icons';
 
 const LandingPageNavbar = () => {
 
@@ -39,12 +39,20 @@ const LandingPageNavbar = () => {
 
                     <div className={Styles.navbar_link} key={i}>
                         <Link href={"/"} className={Styles.navbar_link_link}>{link.name} </Link>
-                        {link.dropdown && <MdArrowDropDown size={20}></MdArrowDropDown>}
+                        {link.dropdown &&
+                        <FontAwesomeIcon 
+                        icon={faCaretDown} 
+                        size="xl" 
+                        style={{color:"rgba(37, 37, 37, 1)"}} />
+                     }
                     
                     </div>
                     )
                     })}
-                    <FaSearch size={25} color={"rgba(212, 158, 12, 1)"}></FaSearch>
+                    <div className={Styles.search_icon_div}>
+
+                    <FontAwesomeIcon icon={faMagnifyingGlass} size="xl" style={{color:"rgba(212, 158, 12, 1)"}} />
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,6 +1,7 @@
 import Modal from "../modal/modal";
 import InputWithIcon from "../inputWithIcon/inputWithIcon";
-import {  FaEnvelope, FaLock } from "react-icons/fa";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope, faLock  } from '@fortawesome/free-solid-svg-icons';
 import Button from "../button/button";
 import Styles from "./resetPassword.module.css"
 
@@ -10,15 +11,16 @@ const ResetPassword = () => {
             <h3>Reset Password</h3>
 
             <InputWithIcon type={"text"} placeholder={"Email Address"} marginBottom={"1rem"}>
-                <FaEnvelope></FaEnvelope>
+            <FontAwesomeIcon icon={faEnvelope} size="lg" style={{color:"rgba(10, 44, 78, 1)"}} />
+
             </InputWithIcon>
 
             <InputWithIcon type={"text"} placeholder={" Enter New Password"}  marginBottom={"1rem"}>
-                <FaLock></FaLock>
+            <FontAwesomeIcon icon={faLock} size="lg" style={{color:"rgba(10, 44, 78, 1)"}} />
             </InputWithIcon>
 
             <InputWithIcon type={"text"} placeholder={"Confirm New Password"} marginBottom={"1rem"}>
-                <FaLock></FaLock>
+            <FontAwesomeIcon icon={faLock} size="lg" style={{color:"rgba(10, 44, 78, 1)"}} />
             </InputWithIcon>
 
             <p className={Styles.text_under_inputs}>
@@ -35,6 +37,7 @@ const ResetPassword = () => {
             border={"0"}
             marginTop={"1.5rem"}
             radius={"0.5rem"}
+            padding={"9px 5px"}
             >Reset  Password</Button>
         </Modal>
       );

@@ -1,4 +1,6 @@
 import Styles from "./leftSide.module.css"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHome , faGears, faLayerGroup, faCaretDown, faCaretUp } from '@fortawesome/free-solid-svg-icons';
 import {  HiHome} from "react-icons/hi";
 import {  BsCalculatorFill, BsStack, BsRobot, BsGearFill} from "react-icons/bs";
 import {  MdArrowDropDown} from "react-icons/md";
@@ -21,7 +23,9 @@ const {selectedReportOption} = useSelector((state)=> state.dashboardMenuOption)
     const menuItems = [
         {
             name: "Home",
-            logo: <HiHome size={25}></HiHome>,
+            logo:
+            <FontAwesomeIcon icon={faHome} size="xl"  />
+            ,
             dropdown: false,
             onclickFunction: dashboardMenu.home,
         },
@@ -45,7 +49,9 @@ const {selectedReportOption} = useSelector((state)=> state.dashboardMenuOption)
         },
         {
             name: "Data",
-            logo: <BsStack size={25}></BsStack>,
+            logo: 
+            <FontAwesomeIcon icon={faLayerGroup} size="xl"  />
+            ,
             dropdown: false,
             onclickFunction: dashboardMenu.data,
         },
@@ -57,7 +63,9 @@ const {selectedReportOption} = useSelector((state)=> state.dashboardMenuOption)
         },
         {
             name: "System",
-            logo: <BsGearFill size={25}></BsGearFill>,
+            logo: 
+            <FontAwesomeIcon icon={faGears} size="xl" />
+            ,
             dropdown: false,
             onclickFunction: dashboardMenu.system,
         },
@@ -86,14 +94,15 @@ const {selectedReportOption} = useSelector((state)=> state.dashboardMenuOption)
                   {selectedDashboardMenu == item.onclickFunction 
                   ? <>
                   {item.dropdown 
-                    ? <RiArrowUpSFill size={25}></RiArrowUpSFill> 
-                    : <RiArrowUpSFill size={25} color={"transparent"}></RiArrowUpSFill> }
+                    ? <FontAwesomeIcon icon={faCaretUp} size="lg" />
+
+                    : <FontAwesomeIcon icon={faCaretUp} size="lg" style={{color: "transparent"}} /> }
                   </> 
                 :
                 <>
                  {item.dropdown 
-                    ? <MdArrowDropDown size={25}></MdArrowDropDown> 
-                    : <MdArrowDropDown size={25} color={"transparent"}></MdArrowDropDown> }
+                    ? <FontAwesomeIcon icon={faCaretDown} size="lg" />
+                    : <FontAwesomeIcon icon={faCaretDown} size="lg" style={{color: "transparent"}} /> }
                 </>
                }
                

@@ -1,8 +1,9 @@
 import Modal from "../modal/modal";
 import Styles from "./forgotPassword.module.css"
 import InputWithIcon from "../inputWithIcon/inputWithIcon";
-import {  FaEnvelope } from "react-icons/fa";
-import {  AiOutlineCloseCircle } from "react-icons/ai";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope  } from '@fortawesome/free-solid-svg-icons';
+import {  faCircleXmark } from '@fortawesome/free-regular-svg-icons';
 import Overlay from "../overlay/overlay";
 import Button from "../button/button";
 
@@ -15,12 +16,14 @@ const ForgotPassword = ({closeModal}) => {
         <Modal zIndex={"7"} width={"27%"}>
             <div className={Styles.main_container}>
                 <div className={Styles.close_btn} onClick={closeModal}>
-                    <AiOutlineCloseCircle size={25} color={"rgba(212, 158, 12, 1)"}></AiOutlineCloseCircle>
+                <FontAwesomeIcon icon={faCircleXmark} size="xl" style={{color:"rgba(212, 158, 12, 1)"}} />
+
                 </div>
             <h3>Forgot Password</h3>
 
             <InputWithIcon type={"text"} placeholder={"Email Address"}>
-                <FaEnvelope></FaEnvelope>
+                <FontAwesomeIcon icon={faEnvelope} size="lg" style={{color:"rgba(10, 44, 78, 1)"}} />
+
             </InputWithIcon>
 
             <p className={Styles.text_under_input}>
@@ -35,6 +38,7 @@ const ForgotPassword = ({closeModal}) => {
              border={"0"}
              marginTop={"9rem"}
              radius={"0.5rem"}
+             padding={"12px 5px"}
              >Retrieve Password</Button>
             </div>
         </Modal>

@@ -29,7 +29,9 @@ const Home = () => {
               "rgba(75,192,192,1)",
             ],
             borderColor: "black",
-            borderWidth: 2
+            borderWidth: 0,
+            barThickness: 6,
+            grouped:false,
           }
         ]
     })
@@ -80,10 +82,10 @@ const Home = () => {
                 </div>
             </div>
           </div>
-          <div className={Styles.chart_div}>
+          {/* <div className={Styles.chart_div}>
 
           <BarChart chartData={chartData}></BarChart>
-          </div>
+          </div> */}
           </>
     
      );
