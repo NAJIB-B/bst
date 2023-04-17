@@ -1,0 +1,29 @@
+.header_object{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(10, 44, 78, 1);
+    padding: 1.3rem;
+    color: rgba(255, 255, 255, 1);
+}
+.main_container{
+    padding: 1.3rem;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+.main_container:nth-child(odd){
+    background-color: rgba(10, 44, 78, 0.1);
+}
+.main_container:nth-child(even){
+    background-color: rgba(250, 250, 250, 1);
+}
+.object_item{
+    flex:14.2%;
+    text-align: center;
+}
+.download_btn{
+    color:rgba(212, 158, 12, 1);
+     border: 1px solid rgba(212, 158, 12, 1);
+     padding: 5px 1px;
+
+}

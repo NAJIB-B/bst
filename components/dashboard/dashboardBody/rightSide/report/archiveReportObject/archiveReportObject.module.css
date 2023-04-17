@@ -1,0 +1,40 @@
+.main_container{
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.left_side{
+    display: flex;
+    justify-content: center;
+   
+    gap:0.2rem;
+    margin-left: 1rem;
+}
+.left_side .checkbox{
+  padding-top: 0.8rem;
+}
+.left_side .left_side{
+    display: flex;
+    flex-direction: column;
+    
+}
+.left_side .left_side .top{
+    font-weight: 600;
+    color: rgba(10, 44, 78, 1);
+}
+.left_side .left_side .bottom{
+   color: rgba(60, 60, 67, 0.6);
+   font-size: 14px;
+  
+}
+.right_side{
+    margin-right: 5rem;
+}
+.download{
+    color: rgba(212, 158, 12, 1);
+}
+.hr_div{
+    width: 95%;
+    margin: auto;
+}

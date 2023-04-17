@@ -52,6 +52,24 @@
     text-align: right;
 }
 
+/* upload report stylings */
+
+.choose_file_btn{
+    flex:20%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(118, 118, 128, 0.12);
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    border-radius: 0.625rem;
+}
+.upload_search_input{
+    flex: 65%;
+}
+.upload_btn{
+flex:15%;
+}
     
 @media screen and (max-width: 1100px){
 

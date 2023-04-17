@@ -4,6 +4,8 @@ import HorizontalRule from "@/components/horizontalRule/horizontalRule";
 import Styles from "./data.module.css"
 import Filter from "../../filter/filter";
 import DataObject from "./dataObject/dataObject";
+import { filterTypes } from "@/utils/dashboard";
+
 
 const navOptions ={
     option1: "option1",
@@ -29,7 +31,7 @@ const Data = () => {
             option4={"Archived"}></SelectorNav>
             
 
-           <Filter></Filter>
+           <Filter type={filterTypes.viewReport}></Filter>
            <HorizontalRule 
             color={"rgba(118, 118, 128, 0.12)"} 
             marginTop={"1rem"}
