@@ -4,6 +4,7 @@
 }
 .top_section_left{
     flex:45%;
+    color: rgba(10, 44, 78, 1);
 }
 .top_section_right{
     flex:55%;

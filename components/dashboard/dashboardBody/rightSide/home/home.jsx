@@ -70,11 +70,13 @@ const Home = () => {
                 radius={"0.625rem"}
                 width={"25%"}
                 border={"0"}
-                padding={"12px 16px"}>Go to Data</Button>
+                fontWeight={"600"}
+                padding={"12px 8px"}>Go to Data</Button>
                 <Button 
                 fill={"rgba(39, 174, 96, 1)"} 
                 color={"white"} 
                 marginTop={"0.5rem"}
+                fontWeight={"600"}
                 radius={"0.625rem"}
                 width={"30%"}
                 border={"0"}
