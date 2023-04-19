@@ -64,7 +64,7 @@ const SignIn = () => {
             <div className={Styles.top_section}>
 
             <div className={Styles.input_div}> 
-            <FontAwesomeIcon icon={faUser} size="xl" style={{color:"rgba(10, 44, 78, 1)"}} />
+            <FontAwesomeIcon icon={faUser} size="md" style={{color:"rgba(10, 44, 78, 1)"}} />
                <input 
                className={Styles.input}
                type="text" 
@@ -77,7 +77,7 @@ const SignIn = () => {
             <p className={Styles.error_message}> Please input a valid email</p>
           ) : null}
             <div className={Styles.input_div}> 
-            <FontAwesomeIcon icon={faLock} size="xl" style={{color:"rgba(10, 44, 78, 1)"}} />
+            <FontAwesomeIcon icon={faLock} size="md" style={{color:"rgba(10, 44, 78, 1)"}} />
                <input 
                className={Styles.input}
                name="password"
@@ -91,7 +91,7 @@ const SignIn = () => {
           ) : null}
             <div className={Styles.input_checkbox}> 
                <input type="checkbox"></input>
-                <p>Remember me</p>
+                <p className={Styles.remember_me}>Remember me</p>
             </div>
             </div>
             <Button 

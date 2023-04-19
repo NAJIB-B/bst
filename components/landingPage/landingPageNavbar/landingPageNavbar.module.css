@@ -9,6 +9,7 @@
 .navbar{
 display: flex;
 gap:1.5rem;
+margin-bottom: 1rem;
 justify-content: left;
 }
 .navbar_link{
