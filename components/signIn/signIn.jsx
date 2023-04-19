@@ -104,7 +104,7 @@ const SignIn = () => {
             padding={"0.5rem"}
             marginTop={"2rem"}
             fontWeight={"600"}
-            fontSize={"1.1rem"}
+            fontSize={"1rem"}
             action={validate}>
             </Button>
 
