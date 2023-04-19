@@ -1,6 +1,6 @@
 import Styles from "./leftSide.module.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome , faGears, faLayerGroup, faCaretDown, faCaretUp } from '@fortawesome/free-solid-svg-icons';
+import { faHome , faGears, faLayerGroup, faCaretDown, faCaretUp, faNewspaper } from '@fortawesome/free-solid-svg-icons';
 import {  HiHome} from "react-icons/hi";
 import {  BsCalculatorFill, BsStack, BsRobot, BsGearFill} from "react-icons/bs";
 import { useSelector, useDispatch } from "react-redux";
@@ -29,7 +29,7 @@ const {selectedReportOption} = useSelector((state)=> state.dashboardMenuOption)
         },
         {
             name: "Report",
-            logo: <BsCalculatorFill size={25}></BsCalculatorFill>,
+            logo:  <FontAwesomeIcon icon={faNewspaper} size="xl"  />,
             dropdown: true,
             onclickFunction: dashboardMenu.report,
             selectedOption: selectedReportOption,
