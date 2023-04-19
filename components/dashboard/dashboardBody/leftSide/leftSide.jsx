@@ -81,7 +81,7 @@ const {selectedReportOption} = useSelector((state)=> state.dashboardMenuOption)
                   return(
                   <>
                   
-                 <div className={ selectedDashboardMenu == item.onclickFunction
+                 <div key={key} className={ selectedDashboardMenu == item.onclickFunction
                     ? Styles.active_menu : Styles.menu_item_div} 
                  onClick={()=>{dispatch(setSelectedDashboardMenu(item.onclickFunction))}}>
                   {item.logo} <p>{item.name}</p> 
@@ -114,7 +114,7 @@ const {selectedReportOption} = useSelector((state)=> state.dashboardMenuOption)
                  {item.menuOptions.map((option, key)=>{
                     return(
 
-                        <div className={item.selectedOption == option.onclickFunction?
+                        <div key={key} className={item.selectedOption == option.onclickFunction?
                         Styles.activeOption : Styles.inActiveOption}
                         onClick={()=>{dispatch(item.optionSelector(option.onclickFunction))}}
                         ><p className={Styles.menuOption}>{option.name}</p></div>
