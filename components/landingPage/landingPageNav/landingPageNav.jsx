@@ -10,7 +10,7 @@ const LandingPageNav = () => {
         <div className={Styles.outer_container}>
             <div className={Styles.inner_container}>
                 <div className={Styles.top_section}>
-                    <div>
+                    <div className={Styles.logo}>
                         <Image src={"./logo.svg"} width={145} height={105}></Image>
                     </div>
                     <div className={Styles.top_section_right}>

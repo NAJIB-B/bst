@@ -12,6 +12,9 @@
     display: flex;
     justify-content: space-between;
 }
+.logo{
+    margin-top: 1rem;
+}
 .top_section_right{
     width: 30%;
 }
