@@ -5,13 +5,28 @@
 .active{
     color:rgba(212, 158, 12, 1);
     padding-bottom:1rem ;
-    border-bottom: 3px solid rgba(212, 158, 12, 1);
+    /* border-bottom: 3px solid rgba(212, 158, 12, 1); */
     position: relative;
     cursor: pointer;
+    font-weight: 600;
+}
+.active::before{
+    content: " ";
+    position: absolute;
+    background-color: rgba(212, 158, 12, 1);
+    width: 88px;
+    height: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+    top:2.55rem;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
 }
 
 .notActive{
     cursor: pointer;
     padding-bottom:1rem ;
     border-bottom: 3px solid transparent;
+    color: rgba(10, 44, 78, 1);
+    font-weight: 600;
 }

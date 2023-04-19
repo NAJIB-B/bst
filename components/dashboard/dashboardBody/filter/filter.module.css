@@ -4,7 +4,7 @@
     margin-bottom: 1rem;
 }
 .filter_btn{
-    flex:20%;
+    flex:15%;
     display:flex;
     justify-content: space-between;
     align-items: center;
@@ -14,7 +14,7 @@
     border-radius: 0.625rem;
 }
 .search_input{
-    flex: 80%;
+    flex: 85%;
 }
 .action_section{
     display: flex;
@@ -55,7 +55,7 @@
 /* upload report stylings */
 
 .choose_file_btn{
-    flex:20%;
+    flex:15%;
     display:flex;
     justify-content: space-between;
     align-items: center;
@@ -63,12 +63,17 @@
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     border-radius: 0.625rem;
+    font-size: 14px;
 }
 .upload_search_input{
-    flex: 65%;
+    flex: 70%;
+    margin-left: -1rem;
 }
 .upload_btn{
-flex:15%;
+    flex:15%;
+    margin-left: 2rem;
+    font-weight: 600;
+
 }
 .filter_text{
     font-weight: 600;

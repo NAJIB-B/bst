@@ -9,13 +9,16 @@ import { filterTypes } from "@/utils/dashboard";
 const Filter = ({type}) => {
     return ( 
         <>
+
+    {/* for view report */}
+
         {type == filterTypes.viewReport ?
         <>
         
          <div className={Styles.top_section}>
 
 <div className={Styles.filter_btn}>
-    <FaFilter size={22}></FaFilter>
+    <FaFilter size={20}></FaFilter>
     <span className={Styles.filter_text}>Filter</span>
     <MdArrowDropDown size={25}></MdArrowDropDown>
 </div>
@@ -52,6 +55,9 @@ borderColor={"rgba(118, 118, 128, 0.12)"}
 </div>
      
         </>:""}
+
+   {/* for upload report */}
+
         {type == filterTypes.uploadReport ? 
         <>
             <div className={Styles.top_section}>
@@ -78,7 +84,7 @@ borderColor={"rgba(118, 118, 128, 0.12)"}
     radius={"0.625rem"}
     width={"100%"}
     padding={"0.8rem"}
-    border={"0"}>Upload <FiUpload></FiUpload></Button>
+    border={"0"}>Upload <FiUpload size={18}></FiUpload></Button>
 </div>
 </div>
 <div className={Styles.action_section}>

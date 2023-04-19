@@ -11,7 +11,7 @@ const UploadReportObject = () => {
             <span className={Styles.object_item}>Status</span>
             <span className={Styles.object_item}>Uploaded Date</span>
             <span className={Styles.object_item}>Total Records</span>
-            <span className={Styles.object_item}>View</span>
+            <span className={`${Styles.object_item} ${Styles.view}`}>View</span>
         </div>
 
         {list.map((item, index)=>{

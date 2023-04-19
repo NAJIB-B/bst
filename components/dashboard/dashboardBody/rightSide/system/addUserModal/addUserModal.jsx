@@ -8,6 +8,7 @@ import InputWithIcon from "@/components/inputWithIcon/inputWithIcon";
 import HorizontalRule from "@/components/horizontalRule/horizontalRule";
 import {  MdArrowDropDown } from "react-icons/md";
 import { useState } from "react";
+import UserAdminSwitch from "../userAdminSwitch/userAdminSwitch";
 
 
 
@@ -28,28 +29,20 @@ const AddUserModal = ({closeModal, addUser}) => {
 
             </div>
         <h3>Add  User</h3>
-        <div className={Styles.change_user_div}>
+        <div className={Styles.change_user_div} onClick={toogleDropdown}>
 
         <div className={Styles.change_user} onClick={toogleDropdown}>
         <span>User</span>
         <MdArrowDropDown size={25}></MdArrowDropDown>
-        { showDropdown ? 
-        
-        <div className={Styles.change_user_dropdown} onClick={toogleDropdown}>
-            <span>Admin</span>
-            <HorizontalRule color={"black"} width={"100%"}></HorizontalRule>
-            <span>User</span>
-            <HorizontalRule color={"black"} width={"100%"}></HorizontalRule>
-        </div>
-        : ""
-    }
+       
         </div>
         </div>
+        {showDropdown ?  <UserAdminSwitch marginTop={"-4px"} onClick={toogleDropdown}></UserAdminSwitch> : ""}
       
 <div className={Styles.top_section}>
 
 
-            <InputWithIcon type={"text"} placeholder={"Email Address"} marginBottom={"1rem"}>
+            <InputWithIcon type={"text"} placeholder={"Email Address"} marginBottom={"2rem"} marginTop={"0.5rem"}>
             <FontAwesomeIcon icon={faEnvelope} size="lg" style={{color:"rgba(10, 44, 78, 1)"}} />
 
             </InputWithIcon>

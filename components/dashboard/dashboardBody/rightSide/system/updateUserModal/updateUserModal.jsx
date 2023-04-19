@@ -7,6 +7,7 @@ import Modal from "@/components/modal/modal";
 import Button from "@/components/button/button";
 import HorizontalRule from "@/components/horizontalRule/horizontalRule";
 import { useState } from "react";
+import UserAdminSwitch from "../userAdminSwitch/userAdminSwitch";
 
 
 const UpdateUserModal = ({closeModal, goBack, updateUser, deleteUser}) => {
@@ -35,18 +36,11 @@ const UpdateUserModal = ({closeModal, goBack, updateUser, deleteUser}) => {
         <div className={Styles.change_user} onClick={toogleDropdown}>
         <span>User</span>
         <MdArrowDropDown size={25}></MdArrowDropDown>
-        { showDropdown ? 
+    
+        {showDropdown ? <UserAdminSwitch marginTop={"11rem"} onClick={toogleDropdown}></UserAdminSwitch> : ""}
+        </div>
         
-        <div className={Styles.change_user_dropdown} onClick={toogleDropdown}>
-            <span>Admin</span>
-            <HorizontalRule color={"black"} width={"100%"}></HorizontalRule>
-            <span>User</span>
-            <HorizontalRule color={"black"} width={"100%"}></HorizontalRule>
-        </div>
-        : ""
-    }
-        </div>
-       
+        
         </div>
 
         <Button 
