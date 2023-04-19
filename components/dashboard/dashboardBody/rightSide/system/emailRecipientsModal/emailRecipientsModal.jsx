@@ -2,7 +2,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope  } from '@fortawesome/free-solid-svg-icons';
 import {  faCircleXmark } from '@fortawesome/free-regular-svg-icons';
-import Styles from "./emailrecipientsModal.module.css"
+import Styles from "./emailRecipientsModal.module.css"
 import Modal from "@/components/modal/modal";
 import UserObjet from "./userObject/userObject";
 
