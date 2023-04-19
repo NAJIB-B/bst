@@ -4,7 +4,6 @@ import InputWithIcon from "../inputWithIcon/inputWithIcon";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope  } from '@fortawesome/free-solid-svg-icons';
 import {  faCircleXmark } from '@fortawesome/free-regular-svg-icons';
-import Overlay from "../overlay/overlay";
 import Button from "../button/button";
 
 

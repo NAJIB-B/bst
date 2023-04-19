@@ -1,0 +1,26 @@
+.main_container{
+    position: relative;
+    width: 90%;
+    margin: auto;
+  
+}
+.close_btn{
+    position: absolute;
+    top:-5px;
+    right: 0;
+    cursor: pointer;
+}
+.email_text{
+color: rgba(79, 79, 79, 1);
+font-weight: 600;
+text-align: left;
+margin-bottom: 0.8rem;
+margin-top: 3rem;
+}
+.email_input{
+padding: 12px;
+border: 1px solid rgba(60, 60, 67, 0.6);
+border-radius: 10px;
+width: 100%;
+outline: none;
+}

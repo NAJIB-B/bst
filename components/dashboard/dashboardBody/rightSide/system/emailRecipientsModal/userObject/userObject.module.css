@@ -1,0 +1,33 @@
+.main_container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    align-items: center;
+    cursor: pointer;
+}
+.left_side{
+text-align: left;
+display: flex;
+gap: 0.2rem;
+}
+.left_side .left_side{
+    display: flex;
+    flex-direction: column;   
+}
+.left_side .left_side .top{
+    font-weight: 600;
+    color: rgba(10, 44, 78, 1);
+    font-size: 14px; 
+}
+.left_side .left_side .bottom{
+   color: rgba(60, 60, 67, 0.6);
+   font-size: 14px; 
+}
+
+.user_icon{
+  margin-top: 9px;
+  color: rgba(10, 44, 78, 1);
+}
+.next{
+    color: rgba(212, 158, 12, 1);
+}

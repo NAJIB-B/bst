@@ -3,8 +3,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome , faGears, faLayerGroup, faCaretDown, faCaretUp } from '@fortawesome/free-solid-svg-icons';
 import {  HiHome} from "react-icons/hi";
 import {  BsCalculatorFill, BsStack, BsRobot, BsGearFill} from "react-icons/bs";
-import {  MdArrowDropDown} from "react-icons/md";
-import { RiArrowUpSFill} from "react-icons/ri";
 import { useSelector, useDispatch } from "react-redux";
 import { setSelectedDashboardMenu } from "@/redux/dashboard";
 import { setSelectedReportOption } from "@/redux/dashboardMenuOptions";

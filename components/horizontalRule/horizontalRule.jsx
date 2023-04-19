@@ -7,6 +7,7 @@ const HorizontalRule = (props) => {
         color,
         marginTop,
         marginBottom,
+        hrWidth,
     } = props
     return ( 
         <hr className={Styles.horizontal_rule}
@@ -16,6 +17,7 @@ const HorizontalRule = (props) => {
             borderColor: color ? color : '',
             marginTop: marginTop ? marginTop :"",
             marginBottom: marginBottom ? marginBottom :"",
+            width: hrWidth ? hrWidth : "",
         }}></hr>
      );
 }

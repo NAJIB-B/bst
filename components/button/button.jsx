@@ -18,6 +18,8 @@ const Button = (props) => {
         btnStyle,
         marginTop,
         svg,
+        logoGap,
+        justifyLogoCenter,
     } = props
     return ( 
         <button
@@ -38,6 +40,8 @@ const Button = (props) => {
           gap: gap && gap,
           transition: 'all 0.3s',
           marginTop: marginTop,
+          
+          ...props
         }}
         onClick={action}
         // className="btn button-black"
@@ -48,7 +52,9 @@ const Button = (props) => {
             {svg ? icon : <Image src={icon} alt="" width="100%" height="100%" />}
           </div>
         )}
-        <div className="btn_label">{label || props.children}</div>
+        <div className={Styles.btn_label} 
+        style={{gap: logoGap ? logoGap : "",
+        justifyContent: justifyLogoCenter ? "center" : "" }}>{label || props.children}</div>
       </button>
      );
 }

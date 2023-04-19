@@ -18,7 +18,7 @@ const UploadReportObject = () => {
   return(
 
     
-    <div className={Styles.main_container}>
+    <div className={Styles.main_container} key={index}>
        <span >{index}</span>
        <span className={Styles.object_item}>content</span>
        <span className={Styles.object_item}>content</span>

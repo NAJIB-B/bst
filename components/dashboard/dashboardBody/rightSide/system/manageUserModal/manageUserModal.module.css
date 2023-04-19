@@ -1,0 +1,39 @@
+.main_container{
+    position: relative;
+    width: 90%;
+    margin: auto;
+  
+}
+.close_btn{
+    position: absolute;
+    top:-5px;
+    right: 0;
+    cursor: pointer;
+}
+.text_under_input{
+    font-size: 0.875rem;
+    margin-top: 1rem;
+    text-align: left;
+}
+
+.users_div{
+    display: fixed;
+    height: 46.5vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.users_div::-webkit-scrollbar {
+    background-color: rgba(122, 122, 122, 1);
+    width: 2px;
+    margin-left: 1rem;
+  }
+   
+  .users_div::-webkit-scrollbar-track {
+  background-color: rgba(232, 232, 232, 1);
+  }
+   
+  .users_div::-webkit-scrollbar-thumb {
+    background-color: rgba(122, 122, 122, 1);
+    border-radius: 10px;
+  }

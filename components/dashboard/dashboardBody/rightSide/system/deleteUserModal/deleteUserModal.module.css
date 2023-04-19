@@ -1,0 +1,32 @@
+.main_container{
+    position: relative;
+    width: 90%;
+    margin: auto;
+  
+}
+.close_btn{
+    position: absolute;
+    top:0;
+    right: 0;
+    cursor: pointer;
+}
+.back_btn{
+    position: absolute;
+    top:0;
+    left: 0;
+    cursor: pointer;
+}
+.top_section{
+    width: 95%;
+    margin: auto;
+}
+.top_text{
+    font-weight: 600;
+    color: rgba(79, 79, 79, 1);
+}
+.email_text{
+    font-size: 14px;
+    color: rgba(37, 37, 37, 1);
+}
+
+

@@ -1,0 +1,42 @@
+.top_nav{
+    display: flex;
+    align-items: center;
+}
+.left_side{
+    flex:40%;
+}
+.left_side .text{
+    font-weight: 600;
+    color: rgba(10, 44, 78, 1);
+    font-size: 1.125rem;
+}
+
+.right_side{
+    flex:60%;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.users_container{
+    display: fixed;
+    height: 55vh;
+    overflow-y: scroll;
+    margin-top: 2rem;
+    
+}
+
+.users_container::-webkit-scrollbar {
+    background-color: rgba(122, 122, 122, 1);
+    width: 2px;
+    margin-left: 1rem;
+  }
+   
+  .users_container::-webkit-scrollbar-track {
+  background-color: rgba(232, 232, 232, 1);
+  }
+   
+  .users_container::-webkit-scrollbar-thumb {
+    background-color: rgba(122, 122, 122, 1);
+    border-radius: 10px;
+  }
