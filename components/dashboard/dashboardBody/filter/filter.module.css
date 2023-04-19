@@ -70,7 +70,10 @@
 .upload_btn{
 flex:15%;
 }
-    
+.filter_text{
+    font-weight: 600;
+    font-size: 14px;
+}
 @media screen and (max-width: 1100px){
 
 .action_section_left{

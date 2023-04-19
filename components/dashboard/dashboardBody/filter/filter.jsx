@@ -16,7 +16,7 @@ const Filter = ({type}) => {
 
 <div className={Styles.filter_btn}>
     <FaFilter size={22}></FaFilter>
-    <span>Filter</span>
+    <span className={Styles.filter_text}>Filter</span>
     <MdArrowDropDown size={25}></MdArrowDropDown>
 </div>
 <div className={Styles.search_input}>
@@ -34,7 +34,7 @@ borderColor={"rgba(118, 118, 128, 0.12)"}
     <div className={Styles.action_section_left}>
     <input type="checkbox" />
     <div className={Styles.filter_btn}>
-    <span>Actions</span>
+    <span className={Styles.filter_text}>Actions</span>
     <MdArrowDropDown size={25}></MdArrowDropDown>
     </div>
     <p className={Styles.first_text}>Showing 305 reports out of 1093</p>
