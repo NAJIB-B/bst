@@ -39,7 +39,7 @@ const EmailRecipientsModal = ({closeModal, addEmail }) => {
     color={"rgba(212, 158, 12, 1)"} 
     radius={"0.625rem"}
     width={"100%"}
-    padding={"0.8rem"}
+    padding={"0.35rem"}
     border={"1px solid rgba(212, 158, 12, 1)"}
     action={addEmail}>Add Email +</Button>
     </div>
@@ -64,7 +64,7 @@ const EmailRecipientsModal = ({closeModal, addEmail }) => {
         fill={"transparent"}
         border={"1px solid rgba(60, 60, 67, 0.6)"}
         color={"rgba(60, 60, 67, 0.6)"}
-        padding={"14px 3px"}
+        padding={"8px 3px"}
         radius={"10px"}
         marginTop={"1rem"}
         justifyLogoCenter={true}

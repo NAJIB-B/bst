@@ -7,7 +7,7 @@ import Button from "@/components/button/button";
 const AddEmail = ({save, closeModal}) => {
     return ( 
         <>
-         <Modal zIndex={"7"} width={"35%"} fixedHeight={"48vh"} fixed={true}>
+         <Modal zIndex={"7"} width={"35%"} fixedHeight={"50vh"} fixed={true}>
         <div className={Styles.main_container}>
         <div className={Styles.close_btn} onClick={closeModal}>
             <FontAwesomeIcon icon={faCircleXmark} size="xl" style={{color:"rgba(212, 158, 12, 1)"}} />
