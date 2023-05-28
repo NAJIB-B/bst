@@ -1,0 +1,52 @@
+.heading{
+    color: rgba(10, 44, 78, 1);
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 0px;
+}
+.instructionDiv{
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    margin-top: -10px;
+}
+.instructionText{
+    font-weight: 400;
+    font-size: 12px;
+    color: rgba(79, 79, 79, 1);
+}
+.formRow{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem;
+    margin-top: 2.5rem;
+}
+.formField{
+
+    flex:50%;
+}
+.formRow label{
+    font-weight: 600;
+    color: rgba(79, 79, 79, 1);
+    font-size: 16px;
+    display: block;
+}
+.formRow input{
+    border: 1px solid rgba(60, 60, 67, 0.6);
+    border-radius: 4px;
+    outline: 1px;
+    width: 100%;
+    padding: 14px;
+    /* padding: 14px 220px 14px 10px; */
+
+}
+.formRow input::placeholder{
+    font-weight: 400;
+    font-size: 14px;
+    color:rgba(60, 60, 67, 0.6);
+}
+.saveBtn{
+    display: flex;
+    justify-content: center;
+}

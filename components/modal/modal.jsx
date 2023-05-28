@@ -8,7 +8,8 @@ const Modal = (props) => {
             zIndex: zIndex ? zIndex : "",
             width: width ? width : "",
             position: fixed ? "fixed" : "",
-            height : fixedHeight ? fixedHeight : ""
+            height : fixedHeight ? fixedHeight : "",
+            ...props
         }}>
             {props.children}
         </div>

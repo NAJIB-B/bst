@@ -12,16 +12,14 @@ const ReportObject = () => {
             <div className={Styles.first_div}>
                 <div><input type="checkbox" /></div>
                 <div className={Styles.first_div_right}>
-                    <div className={Styles.top}>sec_deals_ 2023-09028.cvx</div>
+                    <div className={Styles.top}>MBR-350.cvx</div>
                     <div className={Styles.bottom}>
-                        <span className={Styles.p}>#18282</span>
-                        <span className={Styles.p}>Secondary</span>
-                        <span>26 January 2022 to 11  March 2023</span>
+                        <p className={Styles.p}>Donec nibh laoreet id nibh lorem. </p>
                     </div>
                 </div>
             </div>
             <div className={Styles.second_div}>
-                <p className={Styles.p}>Run validation</p>
+                <p className={Styles.p}>26 January 2022 to 11  March 2023</p>
             </div>
             <div className={Styles.third_div}>
                 <span>187 completed in 30s</span> 
@@ -31,11 +29,7 @@ const ReportObject = () => {
                <div><FaUserCircle size={23}></FaUserCircle></div>
                <div className={Styles.right}>
                 <span>Created By Tim Hardy</span>
-                <span className={Styles.second_item}>
-                    <span>03/09/2023.</span>
-                    <span>17 votes</span>
-                </span>
-                <span>uuqigb</span>
+               
                </div>
             </div>
             <div className={Styles.view_report}>

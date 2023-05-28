@@ -1,6 +1,12 @@
 import Styles from "./selectorNav.module.css"
 import HorizontalRule from "@/components/horizontalRule/horizontalRule";
 
+// to use selector nav, you can pass in a maximum of 5 option which you can increase your self.
+// then pass in an object that contains all the options and their value i.e "optionsObject"
+// create a useState hook in the component that wants to use the selector nav
+// pass in the initial state i.e which should be set to one of option object
+// pass in the setter to change the selected nav when an option is clicked.
+// check out report.jsx to see the usage
 
 const SelectorNav = (props) => {
     const {option1, option2, option3, option4, option5, active, setActive, optionsObject} = props

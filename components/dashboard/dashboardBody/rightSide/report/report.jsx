@@ -2,7 +2,6 @@ import { useState } from "react";
 import SelectorNav from "../../selectorNav/selectorNav";
 import HorizontalRule from "@/components/horizontalRule/horizontalRule";
 import Styles from "./report.module.css"
-import Button from "@/components/button/button";
 import { useSelector } from "react-redux";
 import Filter from "../../filter/filter";
 import ReportObject from "./reportObject/reportObject";
@@ -33,9 +32,11 @@ const Report = () => {
     const [activeUploadReport, setActiveactiveUploadReport] = useState(uploadReportDataNavOptions.option1)
     return ( 
         <>
+
+        {/* if the selected report option is view report  */}
         {selectedReportOption == reportOptions.viewReports?
         <>
-        
+         
            <SelectorNav
             setActive={setActiveViewReport}
             active={activeViewReport}
@@ -48,10 +49,10 @@ const Report = () => {
            <Filter type={filterTypes.viewReport}></Filter>
            
 
-<HorizontalRule 
-color={"rgba(118, 118, 128, 0.12)"} 
-marginTop={"1rem"}
-marginBottom={"0.8rem"}></HorizontalRule>
+           <HorizontalRule 
+            color={"rgba(118, 118, 128, 0.12)"} 
+            marginTop={"1rem"}
+            marginBottom={"0.8rem"}></HorizontalRule>
 
            <div className={Styles.reports_container}>
 
@@ -62,16 +63,21 @@ marginBottom={"0.8rem"}></HorizontalRule>
            <ReportObject></ReportObject>
            <ReportObject></ReportObject>
            </div>
-        </>:<>
+        </>:""}
+        {/* if the selected report option is upload report data */}
+        {selectedReportOption == reportOptions.uploadReportData ?
+        <>
+
         <SelectorNav
-            setActive={setActiveactiveUploadReport}
-            active={activeUploadReport}
-            optionsObject={uploadReportDataNavOptions}
-            option1={"Upload Report"}
-            option2={"View Archived Reports"}
-         ></SelectorNav>
-            
+          setActive={setActiveactiveUploadReport}
+          active={activeUploadReport}
+          optionsObject={uploadReportDataNavOptions}
+          option1={"Upload Report"}
+          option2={"View Archived Reports"}
+          ></SelectorNav>
            <Filter type={filterTypes.uploadReport}></Filter>
+          
+          {/* if the upload report data nav is set to "upload report" */}
 
          {activeUploadReport == uploadReportDataNavOptions.option1?
          
@@ -82,6 +88,9 @@ marginBottom={"0.8rem"}></HorizontalRule>
 
            </div>
          :""}
+
+          {/* if the upload report data nav is set to "View Archived Reports" */}
+
          {activeUploadReport == uploadReportDataNavOptions.option2?
          
            <div className={Styles.reports_container}>
@@ -96,7 +105,7 @@ marginBottom={"0.8rem"}></HorizontalRule>
 
            </div>
          :""}
-        </>}
+        </>:""}     
         </>
      );
 }

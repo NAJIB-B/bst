@@ -1,7 +1,7 @@
-import Styles from "./userObject.module.css"
+import Styles from "./usersNavOption.module.css"
 
-const UserObject = () => {
-    const list = [1,2,3,4,5]
+const UsersNavOption = () => {
+    const list = [1,2,3,4,5] // list of users to loop over
     return ( 
         <>
         <div className={Styles.header_object}>
@@ -32,4 +32,4 @@ const UserObject = () => {
     );
 }
  
-export default UserObject;
+export default UsersNavOption;

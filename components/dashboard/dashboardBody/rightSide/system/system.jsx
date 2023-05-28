@@ -1,11 +1,14 @@
-import SelectorNav from "../../selectorNav/selectorNav"
 import { useState } from "react"
-import Styles from "./system.module.css"
-import Button from "@/components/button/button"
+
 import {  FaEnvelope} from "react-icons/fa";
 import {  HiUserGroup} from "react-icons/hi";
 import {  MdPersonAddAlt1} from "react-icons/md";
-import UserObject from "./userObject/userObject";
+
+import SelectorNav from "../../selectorNav/selectorNav"
+import Styles from "./system.module.css"
+import Button from "@/components/button/button"
+import UsersNavOption from "./navOptions/usersNavOption/usersNavOption";
+import ProfilingNavOption from "./navOptions/profillingNavOption/profillingNavOption";
 import ManageUserModal from "./manageUserModal/manageUserModal";
 import Overlay from "@/components/overlay/overlay";
 import UpdateUserModal from "./updateUserModal/updateUserModal";
@@ -16,15 +19,16 @@ import EmailRecipientsModal from "./emailRecipientsModal/emailRecipientsModal";
 import AddEmail from "./addEmail/addEmail";
 
 const navOptions ={
-    option1: "Profiling",
-    option2: "Settings",
-    option3: "Access Control",
+    option1:"users",
+    option2: "Profiling",
+    option3: "Settings",
+    option4: "Access Control",
     none: "none"
 }
 
 const System = () => {
 
-    const [active, setActive] = useState(navOptions.option1)
+    const [activeNavOption, setNavOption] = useState(navOptions.option1)
 
     const [manageUsers, setManageUsers] = useState(false)
     const [addUsers, setAddUsers] = useState(false)
@@ -97,15 +101,22 @@ const System = () => {
     return ( 
        <>
           <SelectorNav
-            setActive={setActive}
-            active={active}
+            setActive={setNavOption}
+            active={activeNavOption}
             optionsObject={navOptions}
-            option1={"Profiling"}
-            option2={"Settings"}
-            option3={"Access Control"}
+            option1={navOptions.option1}
+            option2={navOptions.option2}
+            option3={navOptions.option3}
+            option4={navOptions.option4}
             ></SelectorNav>
 
-            <div className={Styles.top_nav}>
+           
+            {/* page main content */}
+
+            {/* if navOption1 is selected */}
+             {activeNavOption === navOptions.option1?
+             <>
+              <div className={Styles.top_nav}>
                 <div className={Styles.left_side}>
                     <span className={Styles.text}>Administrator</span>
                 </div>
@@ -136,9 +147,20 @@ const System = () => {
                         <MdPersonAddAlt1 size={20}></MdPersonAddAlt1> Add Users</Button>
                 </div>
             </div>
-            <div className={Styles.users_container}>
-                <UserObject></UserObject>
-            </div>
+             <div className={Styles.users_container}>
+             <UsersNavOption></UsersNavOption>
+             </div>
+             </>
+         : null
+             }
+            {/* if navOption2 is selected */}
+             {activeNavOption === navOptions.option2?
+             
+             <ProfilingNavOption></ProfilingNavOption>
+             
+         : null
+             }
+            
             {/* manage User modal */}
             {manageUsers ? 
             <>
