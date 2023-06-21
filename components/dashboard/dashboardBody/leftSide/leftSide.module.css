@@ -12,6 +12,7 @@
     font-weight: 600;
     font-size: 18px;
     color: rgba(10, 44, 78, 1);
+    padding-right: 0.8rem;
 }
 .active_menu{
     cursor: pointer;
@@ -24,6 +25,7 @@
     border-top-left-radius: 1.875rem;
     border-bottom-left-radius: 1.875rem;
     font-weight: 600;
+    
 }
 .activeOption{
     cursor: pointer;
