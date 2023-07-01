@@ -1,14 +1,8 @@
 import Head from "next/head";
-import Image from "next/image";
-import { Inter } from "next/font/google";
-import styles from "../styles/Home.module.css";
 import LandingPage from "@/components/landingPage/landingPage";
-import { useGetAccountTestRQuery } from "@/redux/services/api";
+
 
 export default function Home() {
-  const { data, isLoading, isError, error } = useGetAccountTestRQuery();
-
-  isError ?? console.log("from main", error);
   return (
     <>
       <Head>

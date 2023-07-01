@@ -12,7 +12,7 @@ const DashboardNav = () => {
             <div className={Styles.inner_container}>
                 <div className={Styles.top_section}>
                     <div>
-                        <Image  className={Styles.top_section_logo}
+                        <Image  className={Styles.top_section_logo} alt="appLogo"
                          src={"./logo.svg"} width={105} height={105}></Image>
                     </div>
                     <div className={Styles.top_section_right}>

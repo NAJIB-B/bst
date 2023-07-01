@@ -12,8 +12,8 @@ const Footer = () => {
         <div className={Styles.outer_container}>
             <div className={Styles.inner_container}>
                 <div className={Styles.left_side}>
-                    <div className={Styles.logo_div}>
-                        <Image src={"./footerLogo.svg"} height={95} width={145}></Image>
+                    <div className={Styles.logo_div}> 
+                        <Image src={"./footerLogo.svg"} alt="appLogo" height={95} width={145}></Image>
                     </div>
                     <p>
                     urna. amet, felis, Donec id ullamcorper vitae Nam Donec tincidunt varius 
@@ -26,7 +26,7 @@ const Footer = () => {
                     </p>
                     <div className={Styles.contact_div}>
                         <div>
-                            <Image src={"./customerCare.svg"} height={45} width={45}></Image>
+                            <Image src={"./customerCare.svg"} alt="customer care" height={45} width={45}></Image>
                         </div>
                         <div>
                             <p  className={Styles.contact_div_text}>Need Help? Call Us Now</p>

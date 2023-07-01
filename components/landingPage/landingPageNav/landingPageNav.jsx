@@ -11,7 +11,7 @@ const LandingPageNav = () => {
             <div className={Styles.inner_container}>
                 <div className={Styles.top_section}>
                     <div className={Styles.logo}>
-                        <Image src={"./logo.svg"} width={145} height={105}></Image>
+                        <Image src={"./logo.svg"} alt="appLogo" width={145} height={105}></Image>
                     </div>
                     <div className={Styles.top_section_right}>
                         <div className={Styles.contact_details}>

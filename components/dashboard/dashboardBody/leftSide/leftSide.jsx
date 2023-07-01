@@ -1,8 +1,8 @@
 import Styles from "./leftSide.module.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome , faGears, faLayerGroup, faCaretDown, faCaretUp, faNewspaper } from '@fortawesome/free-solid-svg-icons';
-import {  HiHome} from "react-icons/hi";
-import {  BsCalculatorFill, BsStack, BsRobot, BsGearFill} from "react-icons/bs";
+
+import {   BsRobot} from "react-icons/bs";
 import { useSelector, useDispatch } from "react-redux";
 import { setSelectedDashboardMenu } from "@/redux/dashboard";
 import { setSelectedReportOption } from "@/redux/dashboardMenuOptions";

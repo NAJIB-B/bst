@@ -1,3 +1,12 @@
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+import validator from "validator";
+import { useDispatch } from "react-redux";
+
+
+import {useLoginUserMutation} from "../../redux/services/api"
+import {setLoginProfile, setUserAuth} from "../../redux/user"
 import Modal from "../modal/modal";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faLock} from '@fortawesome/free-solid-svg-icons';
@@ -7,7 +16,8 @@ import ForgotPassword from "../forgotPassword/forgotPassword";
 import { useState } from "react";
 import Overlay from "../overlay/overlay";
 import { useRouter } from "next/router";
-import ResetPassword from "../resetPassword/resetPassword";
+import Loading from "../loading/loading";
+
 
 const defaultFormFields={
    password:"",   
@@ -15,32 +25,64 @@ const defaultFormFields={
 }
 
 const SignIn = () => {
+
+
+  const dispatch = useDispatch()
    const router = useRouter()
+   const [loginUser, {data,  isLoading, isSuccess}] = useLoginUserMutation()
+
    const [formFields, setFormFields]= useState(defaultFormFields)
     const {password, email} = formFields
 
     const [emailError, setEmailError] = useState(false)
     const [passwordError, setPasswordError] = useState(false)
 
-    const validate =()=>{
-      if (
-         !new RegExp(
-           /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-         ).test(email)
-       ) {
-        setEmailError(true)
    
+
+    const validate = async ()=>{
+      if (!validator.isEmail(email)) {
+        console.log('please input valid email')
+        setEmailError(true)
          return
        } else {
          setEmailError(false)
        }
-      if (!password.trim()) {
+      if (validator.isEmpty(password)) {
          setPasswordError(true)
          return
        } else {
          setPasswordError(false)
        }
-       router.push("/dashboard")
+       //super admin details
+      //  adminEmail= "super-admin@mail.com"
+      //   adminPassword= "AccessReportSuperAdmin@1234"
+      console.log({email, password})
+       loginUser({email, password})
+       .unwrap()
+       .then(result => {
+        dispatch(setUserAuth(result.data.token)) 
+        dispatch(setLoginProfile(true))
+        
+       }).then(()=>{
+        router.push("/dashboard")
+      console.log(data)})
+       .catch(error => {
+        console.error(error)
+        toast.error(error.data.Message, {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          });
+    
+          setFormFields({email:"", password:""})
+       })
+        
+      
     }
 
     const change =(e)=>{
@@ -58,7 +100,33 @@ const SignIn = () => {
     
       
       {/* <ResetPassword></ResetPassword> */}
-        <Modal>
+
+
+      {/* For logging error */}
+      <ToastContainer
+      position="top-center"
+      autoClose={5000}
+      hideProgressBar={false}
+      newestOnTop={false}
+      closeOnClick
+      rtl={false}
+      pauseOnFocusLoss
+      draggable
+      pauseOnHover
+      theme="light"
+      ></ToastContainer>
+
+      {/* while page is loading or loggin is successful*/}
+      {isLoading || isSuccess ?
+       <>
+       <Overlay></Overlay>
+       <Loading></Loading>
+     </>
+       : null}
+
+    
+      
+        <Modal>          
         
             <h3 className={Styles.heading}>Sign in</h3>
             <div className={Styles.top_section}>
@@ -110,6 +178,7 @@ const SignIn = () => {
 
             <p onClick={()=>{setOverlay(true)}} className={Styles.forgot_password_text}>Forgot your password?</p>
         </Modal>
+      
         {overlay ? (
          <>
          <ForgotPassword closeModal={closeForgotPassword}></ForgotPassword>

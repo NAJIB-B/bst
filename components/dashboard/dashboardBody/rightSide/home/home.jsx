@@ -1,7 +1,6 @@
 import Styles from "./home.module.css"
 import SelectorNav from "../../selectorNav/selectorNav";
 import { useState } from "react";
-import HorizontalRule from "@/components/horizontalRule/horizontalRule";
 import Button from "@/components/button/button";
 import {  MdArrowDropDown} from "react-icons/md";
 import BarChart from "./barChart/barChart";

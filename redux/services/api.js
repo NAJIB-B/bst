@@ -3,19 +3,19 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
-// const baseQuery = fetchBaseQuery({
-//   baseUrl: baseUrl,
-//   prepareHeaders: (headers, { getState }) => {
-//     const token = getState().auth.token
+const baseQuery = fetchBaseQuery({
+  baseUrl: baseUrl,
+  prepareHeaders: (headers, { getState }) => {
+    const token = getState().user.authToken;
 
-//     // If we have a token set in state, let's assume that we should be passing it.
-//     if (token) {
-//       headers.set('authorization', `Bearer ${token}`)
-//     }
+    // If we have a token set in state, let's assume that we should be passing it.
+    if (token) {
+      headers.set("authorization", `Bearer ${token}`);
+    }
 
-//     return headers
-//   },
-// })
+    return headers;
+  },
+});
 
 // Define a service using a base URL and expected endpoints
 export const bstApi = createApi({
@@ -37,13 +37,13 @@ export const bstApi = createApi({
 
     //POST
 
-    RegisterUser: builder.mutation({
-      query: (body) => ({
-        url: `Account/Register`,
-        method: "POST",
-        body,
-      }),
-    }),
+    // RegisterUser: builder.mutation({
+    //   query: (body) => ({
+    //     url: `Account/Register`,
+    //     method: "POST",
+    //     body,
+    //   }),
+    // }),
     loginUser: builder.mutation({
       query: (body) => ({
         url: `Account/Login`,

@@ -49,7 +49,7 @@ const Button = (props) => {
         {icon && (
           <div className="icon">
             {' '}
-            {svg ? icon : <Image src={icon} alt="" width="100%" height="100%" />}
+            {svg ? icon : <Image src={icon} alt="buttonIcon" width="100%" height="100%" />}
           </div>
         )}
         <div className={Styles.btn_label} 
