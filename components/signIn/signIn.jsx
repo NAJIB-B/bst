@@ -56,7 +56,6 @@ const SignIn = () => {
        //super admin details
       //  adminEmail= "super-admin@mail.com"
       //   adminPassword= "AccessReportSuperAdmin@1234"
-      console.log({email, password})
        loginUser({email, password})
        .unwrap()
        .then(result => {
